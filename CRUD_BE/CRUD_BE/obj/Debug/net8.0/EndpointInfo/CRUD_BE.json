@@ -183,11 +183,19 @@
             "type": "string",
             "nullable": true
           },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
           "department": {
             "type": "string",
             "nullable": true
           },
-          "email": {
+          "address": {
             "type": "string",
             "nullable": true
           }

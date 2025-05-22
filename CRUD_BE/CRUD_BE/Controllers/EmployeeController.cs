@@ -1,6 +1,5 @@
 ﻿using CRUD_BE.Data;
 using CRUD_BE.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -86,8 +85,10 @@ namespace CRUD_BE.Controllers
                     return NotFound($"Employee with ID {id} not found.");
 
                 existing.Name = employee.Name;
-                existing.Department = employee.Department;
                 existing.Email = employee.Email;
+                existing.Phone = employee.Phone;
+                existing.Department = employee.Department;
+                existing.Address = employee.Address;
 
                 await _context.SaveChangesAsync();
                 return NoContent();
